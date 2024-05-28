@@ -52,6 +52,26 @@ func main() {
 				),
 			)
 
+			// how to create keyboard
+
+			keyboard := tu.Keyboard(
+				tu.KeyboardRow(
+					tu.KeyboardButton("Start"),
+					tu.KeyboardButton("Help"),
+				),
+				tu.KeyboardRow(
+					tu.KeyboardButton("Send location").WithRequestLocation(),
+					tu.KeyboardButton("Send contact").WithRequestContact(),
+				),
+			)
+
+			message := tu.Message(
+				chatId,
+				"Message with keyboard",
+			).WithReplyMarkup(keyboard)
+
+			_, _ = bot.SendMessage(message)
+
 		}
 	}
 
