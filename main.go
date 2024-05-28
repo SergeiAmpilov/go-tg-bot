@@ -43,6 +43,15 @@ func main() {
 					update.Message.MessageID,
 				),
 			)
+
+			// after message lets send sticker
+			_, _ = bot.SendSticker(
+				tu.Sticker(
+					chatId,
+					tu.FileFromID("CAACAgIAAxkBAAEMNi9mVg29hlmjOk9pkKDYImCBaI118AACSwMAAhM5jxFe4LszKbTW1jUE"),
+				),
+			)
+
 		}
 	}
 

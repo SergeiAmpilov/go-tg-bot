@@ -9,6 +9,7 @@ import (
 
 type Config struct {
 	Token string
+	StickerId string
 }
 
 func init() {
@@ -20,6 +21,7 @@ func init() {
 func New() *Config {
 	return &Config{
 		Token: getEnv("TOKEN", ""),
+		StickerId: getEnv("STICKER_ID", "CAACAgIAAxkBAAEMNjFmVg4GCllRKjUHAwb85hqmMbdnRgACZwMAAhM5jxFB5uPvfPHZUDUE"),
 	}
 }
 
